@@ -26,9 +26,10 @@
   },
   "homepage": "https://github.com/Gum-Joe/buildup#readme",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "yamljs": "^0.2.7"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
+    "grunt": "^0.4.5"
   }
 }
