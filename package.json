@@ -16,10 +16,19 @@
     "ci",
     "ci-service"
   ],
+  "bin": {
+    "buildup": "lib/cli.js"
+  },
   "author": "Gum-Joe",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Gum-Joe/buildup/issues"
   },
-  "homepage": "https://github.com/Gum-Joe/buildup#readme"
+  "homepage": "https://github.com/Gum-Joe/buildup#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+  }
 }
