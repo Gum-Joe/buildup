@@ -1,0 +1,25 @@
+{
+  "name": "buildup",
+  "version": "0.1.0",
+  "description": "Buildup: the fast, easy to use, ci service for everyone.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gum-Joe/buildup.git"
+  },
+  "keywords": [
+    "buildup",
+    "jakhu",
+    "ci",
+    "ci-service"
+  ],
+  "author": "Gum-Joe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gum-Joe/buildup/issues"
+  },
+  "homepage": "https://github.com/Gum-Joe/buildup#readme"
+}
