@@ -1,17 +1,17 @@
 {
   "name": "buildupserver",
   "tasks": {
-    "default": {
-      "type": "build.start",
+    "start": {
+      "type": "build:start",
       "language": "nodejs",
       "install": "npm install",
       "start": "npm start",
       "nodejs": {
-        "version": "{sys.version.node}",
-        "arch": "{sys.info.arch}"
+        "version": "stable"
       }
     },
-    "test": {
+    "build": {
+      "default": true,
       "type": "build:test",
       "language": "nodejs",
       "install": "npm install",
@@ -19,13 +19,13 @@
       "nodejs": {
         "version": [
           "stable",
-          "{node.presents.lts}"
-        ],
-        "arch": "{sys.info.arch}"
+          "5.8.0",
+          "0.12"
+        ]
       },
       "env": {
         "NODE_ENV": "dev",
-        "CXX": "{sys.compiler}"
+        "CXX": "g++-4.8"
       },
       "apt": {
         "sources": [
@@ -33,12 +33,12 @@
         ],
         "packages": [
           "g++-4.8"
-        ],
-        "after": "I{set 'sys.compiler' -> 'g++-4.8' }"
+        ]
       },
       "sys": {
         "docker_image": "ubuntu",
-        "docker_image_tag": "latest"
+        "docker_image_tag": "latest",
+        "compiler": "g++-4.8"
       }
     }
   }

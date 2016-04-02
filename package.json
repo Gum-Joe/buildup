@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/Gum-Joe/buildup#readme",
   "dependencies": {
+    "colours": "^0.6.0-2",
     "commander": "^2.9.0",
     "yamljs": "^0.2.7"
   },
