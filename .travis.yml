@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-  - stable
-  - '5.9.1'
-  - '5.8.0'
-  - v4
-  - '0.12'
+  - "stable"
+  - "5.9.0"
+  - "5.8.0"
+  - "4.4.2"
+  - "0.12"
+  - "iojs"
+
+script: "npm test"
