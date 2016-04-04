@@ -1,0 +1,30 @@
+# File for testing
+---
+  name: "buildupserver"
+  tasks:
+    start:
+      type: "build:start"
+      language: "nodejs"
+      install: "npm install"
+      start: "npm start"
+      nodejs:
+        version: "stable"
+    build:
+      default: true
+      type: "build:test"
+      language: "nodejs"
+      install: "npm install"
+      script: "npm test"
+      nodejs:
+        version:
+          - "stable"
+          - "5.8.0"
+          - "0.12"
+      env:
+        NODE_ENV: "dev"
+        CXX: "g++-4.8"
+      apt:
+        sources:
+          - "ubuntu-r-toolchain"
+        packages:
+          - "g++-4.8"
