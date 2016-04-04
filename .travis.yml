@@ -7,4 +7,5 @@ node_js:
   - "0.12"
   - "iojs"
 
+before_script: "npm install -g mocha"
 script: "npm test"
