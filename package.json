@@ -26,8 +26,10 @@
   },
   "homepage": "https://github.com/Gum-Joe/buildup#readme",
   "dependencies": {
+    "caller-id": "^0.1.0",
     "colours": "^0.6.0-2",
     "commander": "^2.9.0",
+    "debug": "^2.2.0",
     "yamljs": "^0.2.7"
   },
   "devDependencies": {

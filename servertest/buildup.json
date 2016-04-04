@@ -34,11 +34,6 @@
         "packages": [
           "g++-4.8"
         ]
-      },
-      "sys": {
-        "docker_image": "ubuntu",
-        "docker_image_tag": "latest",
-        "compiler": "g++-4.8"
       }
     }
   }
