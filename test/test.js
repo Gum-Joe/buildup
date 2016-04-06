@@ -15,6 +15,8 @@ let sandbox;
 // Server
 const app = require('../app');
 const Log = require('../lib/logger.js').Logger;
+const callback = require('../lib/callback').done;
+const loader = require('../lib/loader');
 require('colours')
 require('mocha-sinon');
 
@@ -52,3 +54,22 @@ describe("Logger tests", () => {
     done();
   })
 });
+
+describe('Loader tests', () => {
+  it('should check if loader can load a buildup.js file', (done) => {
+    const loadedtask = loader.loadFromFile('buildupfile.js');
+    expect(loadedtask.tasks).to.be.a('object')
+    done();
+  })
+  it('should check that loader throws an error if it can not find a buildupfile.js', (done) => {
+    expect(() => loader.loadFromFile('buildupfile.js.test')).to.throw(Error, "Cannot find module 'C:\\Users\\Kishan Sambhi\\Documents\\Projects\\buildup\\buildupfile.js.test'")
+    done();
+  })
+})
+
+describe('done() callback test', () => {
+  it('should check if done() throws an error', (done) => {
+    expect(() => callback(new Error('Test error'))).to.throw(Error, 'Test error')
+    done();
+  })
+})

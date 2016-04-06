@@ -1,4 +1,5 @@
 // My sample task
+/* istanbul ignore next */
 module.exports = (buildup) => {
   buildup.task('hello:world', function (done) {
     // Inside here is any task logic
