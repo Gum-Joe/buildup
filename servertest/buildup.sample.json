@@ -1,5 +1,11 @@
 {
   "name": "buildupserver",
+  "include": [
+    "https://buildup.download/samplecode.zip"
+  ],
+  "plugins": [
+    "git://github.com/Gum-Joe/buildup"
+  ],
   "tasks": {
     "start": {
       "language": "nodejs",
@@ -11,9 +17,6 @@
     },
     "build": {
       "default": true,
-      "options": {
-        "includeDir": "./include"
-      },
       "language": "nodejs",
       "install": "npm install",
       "script": "npm test",
@@ -35,10 +38,7 @@
         "packages": [
           "g++-4.8"
         ]
-      },
-      "include": [
-        "https://github.com/Gum-Joe/jakhu-tester/archive/master.zip"
-      ]
+      }
     }
   }
 }
