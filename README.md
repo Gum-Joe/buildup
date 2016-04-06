@@ -2,7 +2,7 @@
 Buildup: the fast, easy to use, task runner for everyone.
 # Requirements:
 
- - Node >= v4.x.x
+ - `node` >= `v4.x.x`
 
 # Installation:
 ```
