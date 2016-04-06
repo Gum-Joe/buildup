@@ -6,7 +6,7 @@ Buildup: the fast, easy to use, task runner for everyone.
 
 # Installation:
 ```
-$ npm install -g Gum-Joe/buildup
+$ npm install -g buildup
 ```
 # Usage:
 ```
