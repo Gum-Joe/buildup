@@ -1,6 +1,6 @@
 {
   "name": "buildup",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Buildup: the fast, easy to use, task runner for everyone.",
   "main": "app.js",
   "scripts": {
