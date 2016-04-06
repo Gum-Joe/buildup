@@ -1,12 +1,13 @@
-// Sample buildup
-//const tools = require('buildup').tools;
+// My sample task
 module.exports = (buildup) => {
-  buildup.task('test:2', function (done) {
-    buildup.logger.info('Task2 ran');
+  buildup.task('hello:world', function (done) {
+    // Inside here is any task logic
+    buildup.logger.info('Hello World!');
     done();
   })
-  buildup.task('test', ['test:2'], function (done) {
-    buildup.logger.info('Task ran');
+  buildup.task('hello', ['hello:world'], function (done) {
+    // Inside here is any task logic
+    buildup.logger.info('Welcome to buildup!');
     done();
   })
 }

@@ -17,7 +17,7 @@
     "ci-service"
   ],
   "bin": {
-    "buildup": "lib/cli.js"
+    "buildup": "bin/cli.js"
   },
   "author": "Gum-Joe",
   "license": "MIT",
