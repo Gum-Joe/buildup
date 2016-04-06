@@ -1,7 +1,7 @@
 {
   "name": "buildup",
   "version": "0.1.0",
-  "description": "Buildup: the fast, easy to use, ci service for everyone.",
+  "description": "Buildup: the fast, easy to use, task runner for everyone.",
   "main": "app.js",
   "scripts": {
     "test": "mocha"
@@ -14,7 +14,8 @@
     "buildup",
     "jakhu",
     "ci",
-    "ci-service"
+    "ci-service",
+    "task runner"
   ],
   "bin": {
     "buildup": "bin/cli.js"
