@@ -14,7 +14,7 @@ $ buildup <task> [options]
 ```
 # Getting started
 First, you need a buildupfile.js. Use this sample one:
-```
+```javascript
 // My sample task
 module.exports = (buildup) => {
   buildup.task('hello:world', function (done) {
