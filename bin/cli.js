@@ -27,6 +27,6 @@ if (typeof taskrun === 'undefined') {
 }
 var ser = new app.Server('./servertest', { quite: false })
 ser.nameServer('buildtest')
-ser.loadConfig(`buildup.json`, { file: true, type: 'json' })
-ser.loadPlugins()
+//ser.loadConfig(`buildup.json`, { file: true, type: 'json' })
+//ser.loadPlugins()
 ser.runTask(taskrun)
