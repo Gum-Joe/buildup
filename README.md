@@ -66,8 +66,10 @@ $ DEBUG=buildup,task buildup hello
 ```
 $ npm test
 ```
+# Creating plugins
+See [here](docs/plugins.md) for a guide!
 # Be Creative!
-Be Creative: add all sorts to task logic, e.g:
+Be Creative: add all sorts to task logic & plugins, e.g:
 
 - Executing build commands
 - Compilation of files, such as `sass` files
