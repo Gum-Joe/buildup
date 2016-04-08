@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+'use strict'
+/*
+ * CLI for buildup command 'init'
+ */
+
+
+/*
+ * Module dependencies
+ */
+const app = require('../app');
+const logger = new app.Logger('buildup');
+const com = require('commander');
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Setup
+ */
+com
+  .version(require('../package').version)
+  .option('-d, --dir <directory>', 'Directory to create the buildupfile.js in.')
+  .parse(process.argv)
+
+/**
+ * File to use
+*/
+const file = `// Buildup file
+/**
+ * Module dependencies
+*/
+module.exports = (buildup) => {
+  buildup.task('default', function (done) {
+    // Inside here is any task logic
+    buildup.logger.info('Welcome to buildup!');
+    buildup.logger.info('To create a task, use buildup.task(name, deps, method);')
+    done();
+  })
+}
+`
+if (com.dir) {
+  fs.openSync(path.join(com.dir, 'buildupfile.js'), 'w+')
+  // Write
+  fs.writeFileSync(path.join(com.dir, 'buildupfile.js'), file)
+  logger.info(`Buildup file created as ${path.join(com.dir, 'buildupfile.js')}.`);
+} else {
+  fs.openSync('./buildupfile.js', 'w+');
+  // Write
+  fs.writeFileSync('./buildupfile.js', file)
+  logger.info('Buildup file created.');
+}

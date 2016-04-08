@@ -1,4 +1,4 @@
-# buildup [![Build Status](https://travis-ci.org/Gum-Joe/buildup.svg?branch=master)](https://travis-ci.org/Gum-Joe/buildup) [![Coverage Status](https://coveralls.io/repos/github/Gum-Joe/buildup/badge.svg?branch=master)](https://coveralls.io/github/Gum-Joe/buildup?branch=master)
+# buildup [![Build Status](https://travis-ci.org/Gum-Joe/buildup.svg?branch=a1)](https://travis-ci.org/Gum-Joe/buildup) [![Coverage Status](https://coveralls.io/repos/github/Gum-Joe/buildup/badge.svg?branch=a1)](https://coveralls.io/github/Gum-Joe/buildup?branch=a1)
 Buildup: the fast, easy to use, task runner for everyone.
 # Requirements:
 
@@ -42,7 +42,7 @@ You should see, on screen:
 
 ```
 If you want verbose logging, use:
-```
+```bash
 $ DEBUG=buildup,task buildup hello
 ```
 Then you should see:
@@ -63,11 +63,13 @@ $ DEBUG=buildup,task buildup hello
   task info Welcome to buildup! +1ms
 ```
 # Tests:
-```
+```bash
 $ npm test
 ```
+# Creating plugins
+See [here](docs/plugins.md) for a guide!
 # Be Creative!
-Be Creative: add all sorts to task logic, e.g:
+Be Creative: add all sorts to task logic & plugins, e.g:
 
 - Executing build commands
 - Compilation of files, such as `sass` files
