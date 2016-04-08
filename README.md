@@ -42,7 +42,7 @@ You should see, on screen:
 
 ```
 If you want verbose logging, use:
-```
+```bash
 $ DEBUG=buildup,task buildup hello
 ```
 Then you should see:
@@ -63,7 +63,7 @@ $ DEBUG=buildup,task buildup hello
   task info Welcome to buildup! +1ms
 ```
 # Tests:
-```
+```bash
 $ npm test
 ```
 # Creating plugins

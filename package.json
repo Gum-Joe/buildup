@@ -18,7 +18,7 @@
     "task runner"
   ],
   "bin": {
-    "buildup": "./bin/cli.js"
+    "buildup": "./bin/buildup"
   },
   "author": "Gum-Joe",
   "license": "MIT",

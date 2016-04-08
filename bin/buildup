@@ -21,13 +21,13 @@ com
      taskrun = task;
   })
   .option('-v, --verbose', 'Verbose logging')
+  .command('init', 'Create a new buildupfile.js')
   .parse(process.argv);
 
 if (typeof taskrun === 'undefined') {
   taskrun = 'default'
 }
-var ser = new app.Server('./servertest', { quite: false })
-ser.nameServer('buildtest')
-//ser.loadConfig(`buildup.json`, { file: true, type: 'json' })
-//ser.loadPlugins()
-ser.runTask(taskrun)
+if (taskrun !== 'init' && taskrun !== 'help') {
+  var ser = new app.Server('./servertest', { quite: false })
+  ser.runTask(taskrun)
+}
