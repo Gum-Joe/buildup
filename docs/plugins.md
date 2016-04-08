@@ -59,36 +59,57 @@ We also need a server to test with. For our test server, we are going to use `ex
 ```bash
 npm install express --save
 ```
-Now, put the following into a `app.js` file:
+Now, put the following into an`app.js` file:
 ```javascript
 'use strict'
 const express = require('express');
 let app = express();
 // Routes
 app.get('/', (req, res) => {
-  res.send("You've made a buildup plugin!")
+  res.send("You've made a buildup plugin!");
 })
 module.exports = (port) => {
   port = port || process.env.PORT || 8181
   app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+    console.log(`Listening on port ${port}.`);
   })
 }
 ```
 
-Finally, we need a file for our plugin logic. Use this:
+Finally, we need a file for our plugin logic. Put this in a `plugin.js` file:
 ```javascript
 // Put this in a file, such as 'plugin.js'
 // Require the buildup libraries
-const buildup = require('buildup')
-// Export our plugin method
+const buildup = require('buildup');
+// Our plugin method
 module.exports = (options) => {
   // Here is our plugin logic
-  console.log('Plugin is working')
+  console.log('Plugin is working!');
 }
+```
+
+If you now run `buildup server` , you should see the following, in your terminal:
+```
+$ buildup server
+Plugin is working!
 ```
 
 Well done! Your all set up to start making your plugin!
 
 ##### Making the plugin
-We're going to start simple.
+Let's start by making our server run. In the `plugin.js` file's module dependencies, add the following line:
+```javascript
+// This line requires our server file
+const server = require('./app.js');
+```
+To add to this, we need to start the server. Add the following to the plugin method:
+```javascript
+server();
+```
+Now, if we run `builup server`, on screen we should see:
+```
+$ buildup server
+Plugin is working!
+Listening on port 8181.
+```
+Go ahead and fire up your favorite browser and go to http://localhost:8181. On screen you should see:
