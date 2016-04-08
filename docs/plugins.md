@@ -31,7 +31,7 @@ Use this `package.json` (feel free to change the name)
 
 Now we need the `buildup` library.
 
-**You:** Wait, why do I need to install `buildup`?
+Why do I need to install `buildup`?
 
 Well, if you add `buildup` to your plugin's dependencies, you can take advantage of the all the `buildup` features, such as:
 
@@ -94,7 +94,7 @@ $ buildup server
 Plugin is working!
 ```
 
-Well done! Your all set up to start making your plugin!
+Well done! You are all set up to start making your plugin!
 
 ##### Making the plugin
 Let's start by making our server run. In the `plugin.js` file's module dependencies, add the following line:
