@@ -1,7 +1,7 @@
 # buildup [![Build Status](https://travis-ci.org/Gum-Joe/buildup.svg?branch=master)](https://travis-ci.org/Gum-Joe/buildup) [![Coverage Status](https://coveralls.io/repos/github/Gum-Joe/buildup/badge.svg?branch=master)](https://coveralls.io/github/Gum-Joe/buildup?branch=master)
 Buildup: the fast, easy to use, task runner for everyone.
 
-Archived as will not have any further development.
+Archived as will not have any further development. One of my earlier projects when I was just starting to properly use JS.
 
 # Requirements:
 
